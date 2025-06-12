@@ -9,11 +9,11 @@ import static org.apache.spark.sql.functions.col;
 public class DatasetTransformations implements InitSparkSession {
 
     public static Dataset<Row> CreateDataFrame() {
-        //  Dataset<Row> dataset = spark.read().option("header", true).csv("src/main/resources/students_sample_data.csv");
+        //  Dataset<Row> dataset = spark.read().option("header", true).csv("src/main/resources/students.csv");
         // dataset.show(true);
         //  return dataset;
         /* OR */
-        return spark.read().option("header", true).csv("src/main/resources/students_sample_data.csv");
+        return spark.read().option("header", true).csv("src/main/resources/students.csv");
     }
 
     public static void BasicTransformations() {
