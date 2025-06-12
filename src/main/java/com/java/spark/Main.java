@@ -1,5 +1,7 @@
 package com.java.spark;
 
+import com.java.spark.code_challanges.SalesPerProduct;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,5 +9,7 @@ public class Main {
 
         DatasetTransformations.BasicTransformations();
         DatasetTransformations.FilterTransformations();
+
+        SalesPerProduct.process();
     }
 }
