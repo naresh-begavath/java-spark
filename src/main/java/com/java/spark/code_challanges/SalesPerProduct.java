@@ -7,6 +7,7 @@ import org.apache.spark.sql.RowFactory;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructType;
 
+import static java.util.Arrays.asList;
 import static org.apache.spark.sql.functions.col;
 import static org.apache.spark.sql.functions.sum;
 
@@ -27,7 +28,7 @@ public class SalesPerProduct implements InitSparkSession {
                 RowFactory.create(5, "P002", "Phone", 1, 300)
         };
 
-        return spark.createDataFrame(java.util.Arrays.asList(data), schema);
+        return spark.createDataFrame(asList(data), schema);
     }
 
     public static Dataset<Row> computeTotalSalesPerProduct(Dataset<Row> df) {
